@@ -132,16 +132,91 @@
         </aside>
         <!-- body -->
         <div id="overlay" class="overlay"></div>
-        <div class="layout">
+        <div class="layout row g-0  mb-3 justify-content-center m-4">
             <main class="content">
+                <!-- cabeçalho -->
                 <div>
                 <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
                     <i class="ri-menu-line ri-xl"></i>
                 </a>
-                <h1 style="margin-bottom: 0">Sales Management</h1>            
+                <h3 style="margin-bottom: 0">Controle ferramental</h3>   
                 </div>
+  
+                <form action="">
+                    <!-- primeira seção -->
+                    <section>
+                        <div class="inner">
+                            <div class="image-holder">
+                                <img src="images/form-wizard-1.jpg" alt="">
+                            </div>
+                            <div class="form-content" >
+                                <div class="form-header">
+                                    <h3>Registration</h3>
+                                </div>
+                                <p>Please fill with your details</p>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="First Name" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Last Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Your Email" class="form-control">
+                                    </div>
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Phone Number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-holder">
+                                        <input type="text" placeholder="Age" class="form-control">
+                                    </div>
+                                    <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                                        <div class="checkbox-tick">
+                                            <label class="male">
+                                                <input type="radio" name="gender" value="male" checked> Male<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="female">
+                                                <input type="radio" name="gender" value="female"> Female<br>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkbox-circle">
+                                    <label>
+                                        <input type="checkbox" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>   
+              <!-- Anexos -->
+                <div class="row g-0  mb-3 justify-content-center m-4">
+      
+                    <div class="col-auto aio fileWidthArea">
+                      <h5 >Anexar imagem</h5>
+                      <div class="input-group mb-3">
+                          <label for="fotos" class="input-group-text"><i class="bi bi-images"></i></label>
+                          <input class="form-control" type="file" name="fotos" id="fotos">    
+                      </div>
+                    </div>
+                    <div class="col-auto aio fileWidthArea">
+                      <h5>Informações adicionais</h5>      
+                      <textarea class="form-control" id="procedencia" rows="4" placeholder="Ex: Caça, Queimada, Tráfico e etc"></textarea>
+                    </div>
+                </div>
+  
                 <footer class="footer">
-                    Salvar
+                  <div class="row justify-content-center">
+                    <button class="adcInfo btn-light" type="submit">Salvar</button>
+                  </div>
                 </footer>
             </main>
             <div class="overlay"></div>
