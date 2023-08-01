@@ -74,7 +74,7 @@
                         </div>
                     </li>
                     <!-- charts -->
-                    <li class="menu-item sub-menu">
+                    <li class="menu-item">
                         <a href="#">
                         <span class="menu-icon">
                             <i class="ri-bar-chart-2-fill"></i>
@@ -121,15 +121,15 @@
                 <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
                     <i class="ri-menu-line ri-xl"></i>
                 </a>
-                <h3 style="margin-bottom: 0">formulario de Controle</h3>   
+                <h3 style="margin-bottom: 0">Controle ferramental</h3>   
                 </div>
-  
-                <form action="" style="margin-top: 15px">
-                    <!-- SECTION 1 -->
-                        <section style="height:100%">
+                    <form action="" id="myForm" class="mt-3" style="height:100%">
+                        <!-- SECTION 1 -->
+                        <section class="step active" data-step="1">
                             <div class="inner justify-content-center">
                                 <div class="form-content" >
-                                    <p>Ferramental</p>
+                                    <p>Controle Interno</p>
+                                    <!-- row1 -->                                    
                                     <div class="form-row">
                                         <div class="form-holder FirsHolder">
                                             <input type="text" placeholder="Código da Ferramenta" class="form-control">
@@ -138,25 +138,27 @@
                                             <input type="text" placeholder="Uso imediato" class="form-control">
                                         </div>
                                     </div>
+                                    <!-- row2 -->
                                     <div class="form-row">
                                         <div class="form-holder w-100">
                                                 <input type="text" placeholder="Descrição do molde" class="form-control">
                                         </div>
                                     </div>
+                                    <!-- row3 -->
                                     <div class="form-row">
-                                        <div class="form-holder FirsHolder">
+                                        <div class="form-holder FirsHolder custom-dropdown">
                                             <select name="" class="form-control" id="">
-                                                <option value="" disabled selected>Clientes</option>
+                                                <option value="" disabled selected>Client</option>
                                                 <option value="1">Man</option>
                                                 <option value="2">Toyota</option>
                                                 <option value="3">Faurencia</option>
                                             </select>
                                         </div>
-                                        <div class="input-group form-holder">
-                                            <label for="fotos" class="input-group-text"></label>
-                                            <input class="form-control" type="file" name="fotos" id="fotos">    
+                                        <div class="form-holder">
+                                            <input type="text" placeholder="NF envio ao fornec" class="form-control">
                                         </div>
                                     </div>
+                                    <!-- row4 -->
                                     <div class="form-row">
                                         <div class="form-holder FirsHolder">
                                             <input type="text" placeholder="Projeto" class="form-control">
@@ -165,15 +167,79 @@
                                             <input type="text" placeholder="Desenho" class="form-control">
                                         </div>
                                     </div>
+                                    <!-- row5 -->
+                                    <div class="form-row">
+                                        <div class="form-holder FirsHolder">
+                                            <input type="date" placeholder="data" class="form-control">
+                                        </div>
+                                        <div class="input-group form-holder">
+                                            <input class="form-control" type="file" name="fotos" id="fotos" style="border: none;color: #666">    
+                                        </div>
+                                    </div>
+                                    <!-- row6 -->
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-holder FirsHolder">
+                                            <input type="text" id="numeroDecimal" placeholder="Peso" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- row7 -->
                                     <div class="form-row justify-content-center">
                                         <div class="mt-2">
-                                            <button style="border: none;">salvar</button>
+                                            <button type="button" onclick="proximoPasso(2)" style="border: none; color: #666">Next</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                </form>   
+
+                        <!-- SECTION 2 -->
+                        <section class="step" data-step="2">
+                            <div class="inner justify-content-center">
+                                <div class="form-content" >
+                                    <p>Dados Do Cliente</p>
+                                    <!-- row1 -->                                    
+                                    <div class="form-row">
+                                        <div class="form-holder FirsHolder">
+                                            <input type="text" placeholder="Nº Ativo" class="form-control">
+                                        </div>
+                                        <div class="form-holder">
+                                            <input type="text" placeholder="TAG do Cliente" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- row4 -->
+                                    <div class="form-row">
+                                        <div class="form-holder FirsHolder">
+                                            <input type="text" placeholder="PN Cliente" class="form-control">
+                                        </div>
+                                        <div class="form-holder">
+                                            <input type="date" placeholder="Data do projeto" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- row4 -->
+                                    <div class="form-row">
+                                        <div class="form-holder FirsHolder">
+                                            <input type="text" placeholder="NF de Comodato" class="form-control">
+                                        </div>
+                                        <div class="form-holder">
+                                            <input type="date" placeholder="Data NF" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- row6 -->
+                                    <div class="form-row">
+                                        <div class="form-holder w-100">
+                                            <textarea placeholder="OBS:" id="" cols="15" rows="4" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- row7 -->
+                                    <div class="form-row justify-content-center">
+                                        <div class="mt-2">
+                                            <button type="button" style="border: none; color: #666">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
                 <!-- <footer class="footer">
                 </footer> -->
             </main>
@@ -182,6 +248,25 @@
     </div>
     <!-- partial -->
     <script src='https://unpkg.com/@popperjs/core@2'></script>
-    <script  src="JS/script.js"></script>  
+    <script src="js\script.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Máscara para formato de número decimal com ponto
+            $('#numeroDecimal').mask('0000,0');
+          });
+
+          function proximoPasso(proximo) {
+            const etapaAtual = document.querySelector('.step.active');
+            const proximaEtapa = document.querySelector(`[data-step="${proximo}"]`);
+          
+            if (etapaAtual && proximaEtapa) {
+              etapaAtual.classList.remove('active');
+              proximaEtapa.classList.add('active');
+            }
+          }
+    </script>
+
 </body>
 </html>

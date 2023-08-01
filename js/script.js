@@ -252,4 +252,12 @@ INNER_SUB_MENUS_BTN.forEach(element => {
   });
 });
 
+$(document).ready(function() {
+  // Máscara para formato de número decimal com ponto
+  $('#numeroDecimal').mask('0.00');
+});
+
+
+
+
 
